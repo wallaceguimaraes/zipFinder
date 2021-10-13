@@ -73,7 +73,7 @@ function clear(){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 18
+    padding: 32
   },
   viewText: {
     justifyContent: 'center',
@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
     fontSize: 26
   },
   input: {
+    marginTop: 20,
     padding: 5,
     width: '60%',
     height: 30,
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
 
   }, 
   areaBtn: {
-    margin: 10,
+    marginTop: 30,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-evenly'
@@ -109,7 +110,7 @@ const styles = StyleSheet.create({
     fontSize: 14
   },
   viewInfo: {
-    margin: 10,
+    margin: 40,
     alignItems: 'center'
   }
 });
