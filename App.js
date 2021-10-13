@@ -44,11 +44,11 @@ function clear(){
       </View>
       
       <View style={styles.areaBtn}>
-        <TouchableOpacity style={[ styles.btn, { backgroundColor: 'green' } ]} 
+        <TouchableOpacity style={ styles.btn } 
                           onPress={ getCep }>
           <Text style={styles.textBtn}>Buscar</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[ styles.btn, {backgroundColor: 'red'} ]}>
+        <TouchableOpacity style={ styles.btn }>
           <Text style={ styles.textBtn }
                 onPress={ clear }>Limpar</Text>
         </TouchableOpacity>
@@ -56,14 +56,14 @@ function clear(){
 
       { cepUser && 
       <View style={styles.viewInfo}>
-        <Text>CEP: {cepUser.cep}</Text>
-        <Text>Logradouro: {cepUser.logradouro}</Text>
-        <Text>complemento: {cepUser.complemento}</Text>
-        <Text>Bairro: {cepUser.bairro}</Text>
-        <Text>Localidade: {cepUser.localidade}</Text>
-        <Text>UF: {cepUser.uf}</Text>
-        <Text>IBGE: {cepUser.ibge}</Text>
-        <Text>DDD: {cepUser.ddd}</Text>
+        <Text style={ [styles.text, {fontSize: 16}]}>CEP: {cepUser.cep}</Text>
+        <Text style={[styles.text , {fontSize: 16}] }>Logradouro: {cepUser.logradouro}</Text>
+        <Text style={[styles.text , {fontSize: 16}]}>complemento: {cepUser.complemento}</Text>
+        <Text style={[styles.text , {fontSize: 16}]}>Bairro: {cepUser.bairro}</Text>
+        <Text style={[styles.text , {fontSize: 16}]}>Localidade: {cepUser.localidade}</Text>
+        <Text style={[styles.text , {fontSize: 16}]}>UF: {cepUser.uf}</Text>
+        <Text style={[styles.text , {fontSize: 16}]}>IBGE: {cepUser.ibge}</Text>
+        <Text style={[styles.text , {fontSize: 16}]}>DDD: {cepUser.ddd}</Text>
       </View>
       }
     </SafeAreaView>
@@ -73,37 +73,42 @@ function clear(){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 32
+    padding: 32,
+    backgroundColor: '#0048FF',
   },
   viewText: {
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: 58
   },
   text: {
-    color: '#00002f',
-    fontSize: 26
+    color: '#fff',
+    fontSize: 24
   },
   input: {
-    marginTop: 20,
-    padding: 5,
-    width: '60%',
-    height: 30,
+    marginTop: 68,
+    paddingHorizontal: 70,
+    width: 233,
+    height: 46,
     borderRadius: 5,
-    borderWidth: 1,
-
+    backgroundColor: '#fff'
   }, 
   areaBtn: {
-    marginTop: 30,
+    marginTop: 68,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-around',
+    paddingHorizontal: 44,
+
   },
   btn: {
-      width: 100,
-      height: 30,
+      width: 103,
+      height: 43,
       alignItems: 'center',
       justifyContent: 'center',
-      borderRadius: 5
+      borderRadius: 5,
+      backgroundColor: '#510062'
+
   },
   textBtn:{
     color: 'white',
